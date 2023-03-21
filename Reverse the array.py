@@ -6,3 +6,12 @@ for i in range(n):
 
 for i in range(n):
     print(a[i])
+
+    
+Input:
+5
+4
+12
+7
+15
+9
