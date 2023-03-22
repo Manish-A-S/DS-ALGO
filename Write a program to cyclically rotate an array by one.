@@ -1,0 +1,23 @@
+n=int(input())
+arr=[]
+arr = list(map(int,input().split()))
+d=int(input())
+
+for i in range(d):
+    val=arr.pop(0)
+    arr.append(val)
+
+
+for i in arr:
+    print(i,end=" ")
+    
+    
+Sample Input :
+
+7
+1 2 3 4 5 6 7
+2
+
+Sample Output :
+
+3 4 5 6 7 1 2
