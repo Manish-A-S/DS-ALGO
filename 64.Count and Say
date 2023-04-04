@@ -1,0 +1,17 @@
+import itertools
+
+result = "1"
+n=7
+for _ in range(n - 1):
+    v = '' 
+    for digit, group in itertools.groupby(result):
+        
+        count = len(list(group)) 
+        v += "%i%s" % (count, digit) 
+ 
+    result = v 
+print(result)
+
+
+Input: n = 4
+Output: "1211"
