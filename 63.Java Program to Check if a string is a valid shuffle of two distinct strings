@@ -1,0 +1,20 @@
+ans=list(first)+list(second)
+ans=set(ans)
+for i in result:
+    if len(i) != len(first)+len(second)  or  set(i)!=ans:
+        print(i, " is not a shuffle")
+        continue
+    
+    print(i, " is a shuffle")
+        
+    
+
+Input:first = "XY"
+      second = "12"
+      result=["1XY2", "Y1X2", "Y21XX"]
+      
+Output:
+1XY2  is a shuffle
+Y1X2  is a shuffle
+Y21XX  is not a shuffle
+YZ12  is not a shuffle
