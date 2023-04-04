@@ -1,0 +1,9 @@
+for i in range(N):
+    if Arr[i]==i+1:
+        print(i+1)
+
+N = 7
+Arr = [15, 2, 45, 12,5,8, 7]
+Output: 2
+        5
+        7
