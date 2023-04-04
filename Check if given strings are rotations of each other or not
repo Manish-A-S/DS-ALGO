@@ -1,0 +1,9 @@
+temp=S1+S1
+
+if S2 in temp:
+    print(True)
+else:
+    print(False)
+
+Input: S1 = ABCD, S2 = CDAB
+Output: True
