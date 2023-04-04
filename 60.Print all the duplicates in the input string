@@ -1,0 +1,15 @@
+count={}
+for i in s:
+    count.setdefault(i,0)
+    count[i]+=1
+    
+for i in count.keys():
+    if count[i]>1:
+        print(i," ",count[i])
+
+
+
+Input:s="aabaanaaaakkaal"
+output:   
+a   10
+k   2
