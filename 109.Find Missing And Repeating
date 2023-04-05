@@ -1,0 +1,28 @@
+class Solution:
+    def findTwoElement( self,arr, n): 
+        dic={}
+        miss=0
+        prev=0
+        flag=True
+        arr.sort()
+        for i in arr:
+            dic.setdefault(i,0)
+            dic[i]+=1
+            
+            if i==prev:
+                pass
+            elif i!=prev+1 and flag:
+                miss=prev+1
+                flag=False
+                
+            prev=i
+                
+        for i in dic.keys():
+            if dic[i]==2:
+                if miss==0:
+                    miss=prev+1
+                return i,miss
+                
+N = 3
+Arr[] = {1, 3, 3}
+Output: 3 2
