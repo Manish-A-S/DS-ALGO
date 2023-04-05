@@ -1,0 +1,14 @@
+class Solution:
+    def middle(self,A,B,C):
+        x=A-B
+        y=B-C
+        z=C-A
+        
+        if x*y>0: return B
+        elif y*z>0: return C
+        return A
+        
+Input:
+A = 978, B = 518, C = 300
+Output:
+518
