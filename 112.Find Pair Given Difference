@@ -1,0 +1,26 @@
+class Solution:
+
+    def findPair(self, arr, L,N):
+        if N==0:
+            if len(set(arr))==len(arr):
+                return False
+            else:
+                return True
+        
+        #sorting the elements
+        arr.sort()
+        low=0
+        high=1
+        while high<L:
+            diff=arr[high]-arr[low]
+            if diff==N:
+                return True
+            elif diff>N:
+                low=low+1
+            else:
+                high=high+1
+        return False
+        
+L = 6, N = 78
+arr[] = {5, 20, 3, 2, 5, 80}
+Output: 1
