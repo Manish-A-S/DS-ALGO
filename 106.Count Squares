@@ -1,0 +1,26 @@
+class Solution:
+    def countSquares(self, N):
+        if N==1:
+            return 0
+            
+        low=1
+        high=N//2
+        
+        while low<=high:
+            mid=(low+high)//2
+            if mid*mid==N:
+                return mid-1
+            elif (mid+1)*(mid+1)>N and mid*mid<N:
+                return mid
+            elif (mid-1)*(mid-1)<N and mid*mid>N:
+                return mid-1
+            elif mid*mid<N:
+                low=mid+1
+            else:
+                high=mid-1
+
+
+Input :
+N = 9
+Output:
+2
