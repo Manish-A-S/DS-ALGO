@@ -1,0 +1,20 @@
+class Solution:
+    def getPairsCount(self, arr, n, k):
+        dic={}
+        count=0
+        for i in arr:
+            if i<=k:
+                j=k-i
+                if dic.get(j,-1)!=-1:
+                    count+=dic.get(j,-1)
+                    
+                if dic.get(i,-1)==-1:
+                    dic.setdefault(i,0)
+                dic[i]+=1
+                
+        return count
+
+
+N = 4, K = 6
+arr[] = {1, 5, 7, 1}
+Output: 2
