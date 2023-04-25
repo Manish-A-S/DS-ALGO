@@ -1,0 +1,14 @@
+c=a+b
+c.sort()
+i=int(len(c)/2)
+if len(c)%2==0:
+    print((c[i-1]+c[i])/2)
+else:
+    print(c[i])
+    
+    
+Input:
+a = [2, 3, 5, 8]
+b= [10, 12, 14, 16, 18, 20]
+
+Output: 11
