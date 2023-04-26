@@ -1,0 +1,16 @@
+def PalinArray(arr ,n):
+    for i in arr:
+        string=str(i)
+        rev=string[::-1]
+        if string!=rev:
+            return 0
+    return 1
+    
+    
+    
+ Input:
+3
+121 131 20
+ 
+Output:
+0
