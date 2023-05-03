@@ -1,0 +1,66 @@
+mat=[[1,2,3],
+    [4,5,6],
+    [7,8,9]]
+
+mat1=[]
+for i in range(len(mat[0])):
+    temp=[]
+    for j in range(len(mat)-1,-1,-1):
+        temp.append(mat[j][i])
+    mat1.append(temp)
+   
+    
+for i in range(len(mat1)):
+    for j in range(len(mat1[0])):
+        print(mat1[i][j],end=" ")
+        
+    print("")
+    
+    
+Output:
+
+7 4 1 
+8 5 2
+9 6 3
+
+    
+    
+    
+    
+    
+    ##
+    
+    
+    N = 4
+ 
+def display(arr):
+    for i in range(N) :
+        for j in range(N) :
+            print(arr[i][j],end=" ")
+        print()
+             
+# Function to rotate the matrix 90 degree clockwise
+def rotate90Clockwise(arr) :
+    global N
+      
+    # Transpose of matrix
+    for i in range(N) :
+        for j in range(i+1,N) :
+            arr[i][j],arr[j][i]=arr[j][i],arr[i][j]
+     
+    # Reverse individual rows
+    for i in range(N//2) :
+        low = 0
+        high = N-1
+        while (low<high) :
+            arr[i][low],arr[i][high]=arr[i][high],arr[i][low]
+            low = low + 1
+            high = high - 1
+          
+# Driver code      
+arr = [ [ 1, 2, 3, 4 ],
+          [ 5, 6, 7, 8 ],
+          [ 9, 10, 11, 12 ],
+          [ 13, 14, 15, 16 ] ]
+rotate90Clockwise(arr)
+display(arr)
