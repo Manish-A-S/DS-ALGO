@@ -1,0 +1,24 @@
+mat= [[1, 2, 1, 4, 8],
+    [3, 7, 8, 5, 1],
+    [8, 7, 7, 3, 1],
+    [8, 1, 2, 7, 9]]
+    
+dic={} 
+lis=[]
+for i in range(len(mat)):
+    for j in range(len(mat[0])):
+        dic.setdefault(mat[i][j],0);
+        if mat[i][j] in lis:
+            continue
+        lis.append(mat[i][j])
+        dic[mat[i][j]]+=1
+    lis.clear()    
+
+for i in dic.keys():
+    if dic[i]==len(mat):
+        print(i)
+        
+        
+Output: 
+1 8 or 8 1
+8 and 1 are present in all rows.
