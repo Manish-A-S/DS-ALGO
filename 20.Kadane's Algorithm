@@ -1,0 +1,20 @@
+class Solution:
+    ##Complete this function
+    #Function to find the sum of contiguous subarray with maximum sum.
+    def maxSubArraySum(self,arr,N):
+        sum=0
+        maxi=max(arr)
+        for i in arr:
+            sum+=i
+            if sum<0:
+                sum=0
+            elif sum>maxi:
+                maxi=sum
+        return(maxi)
+        
+        
+Input:
+N = 5
+Arr[] = {1,2,3,-2,5}
+Output:
+9
